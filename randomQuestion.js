@@ -116,7 +116,7 @@ function updateQuestion() {
 	var num = document.getElementById('numQuestionInt');
 	num.textContent = numQuestion+1;
 }
-document.onload = function () {
+window.onload = function () {
 	var numQuestion = Math.floor(Math.random()*50);
 	var text = document.getElementById('textQuestionCont'); 
 	text.textContent = questions[numQuestion];
