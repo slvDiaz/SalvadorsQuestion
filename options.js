@@ -15,10 +15,10 @@ function optionsRdb() {
 function changeColor(rdb) {
 	if (rdb===1) {
 		document.getElementById('lblOrden').style.backgroundColor= '#fff';
-		document.getElementById('lblRandom').style.backgroundColor= '#fbe9db';
+		document.getElementById('lblRandom').style.backgroundColor= '#ddd0fe';
 	}
 	else{
 		document.getElementById('lblRandom').style.backgroundColor= '#fff';
-		document.getElementById('lblOrden').style.backgroundColor= '#fbe9db';
+		document.getElementById('lblOrden').style.backgroundColor= '#ddd0fe';
 	}
 }
