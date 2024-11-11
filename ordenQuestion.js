@@ -87,7 +87,7 @@ const answers = [
     "procoagulantes y anticoagulantes",
     "cambia de forma",
     "fvw",
-    "fwv",
+    "fvw",
     "sustancias proagregantes que ayudan a que se peguen las plaquetas",
     "final de hemostasia primaria",
     "hemostasia secundaria",
@@ -95,7 +95,7 @@ const answers = [
     "granulos densos",
     "agregacion plaquetaria",
     "activacion y secrecion",
-    "adhesion plaqueteria",
+    "adhesion plaquetaria",
     "factores de coagulacion",
     "activacion",
     "secrecion",
@@ -124,7 +124,7 @@ function sendAnswer() {
     const textQuestion = document.getElementById('textQuestion').textContent;
     const numQuestion = document.getElementById('numQuestion').textContent;
     
-    if(answerUser === answers[index].toLowerCase()){ // Compara la respuesta del usuario con la respuesta correcta
+    if(removeAccents(answerUser) === answers[index].toLowerCase()){ // Compara la respuesta del usuario con la respuesta correcta
         document.getElementById('inputAnswer').value = "";
         index++; // Avanza al siguiente índice de la pregunta
         if (index < questions.length) { // Si hay más preguntas
@@ -144,4 +144,7 @@ function hiddenError() {
 function hiddenRight() {
     var divRight = document.getElementById('divRight');
     divRight.style.display = 'none';
+}
+const removeAccents = (str) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
