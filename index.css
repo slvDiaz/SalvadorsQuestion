@@ -25,6 +25,7 @@
 	border-radius: 15px;
 	transition: 500ms ease;
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+	margin: 20px;
 }
 .fontH{
 	font-family: 'Edu AU VIC WA NT Pre';
