@@ -24,8 +24,9 @@
 	background-color: #ddd0fe;
 	border-radius: 15px;
 	transition: 500ms ease;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
 }
-.fontH4{
+.fontH{
 	font-family: 'Edu AU VIC WA NT Pre';
 	font-size: 21px;
 }
@@ -38,6 +39,15 @@
 	justify-content: space-between;
 	flex-direction: column;
 }
+#divSubPrin{
+	width: 80%;
+	height: 80%;
+	justify-content: space-between;
+	flex-direction: column;
+}
+#heartGif{
+	width: 30%;
+}
 #sendOpt{
 	width: 80%;
 	height: 8%;
@@ -45,7 +55,10 @@
 	border-radius: 30px;
 	color: #fff;
 	text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
-	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+#helloDani{
+	font-size: 24px;
 }
 h1{
 	font-weight: 600;
