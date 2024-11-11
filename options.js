@@ -5,7 +5,7 @@ function optionsRdb() {
 		location.href = "ordenQuestion.html";
 	}
 	if (random.checked) {
-		location.href = "https://www.youtube.com/watch?v=7h2ryr_uUEs";
+		location.href = "randomQuestion.html";
 	}
 	if (orden.checked == false && random.checked == false) {
 		alert("Selecciona una opcion!");

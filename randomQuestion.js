@@ -1,6 +1,5 @@
-let index = 0;
 const questions = [
-    "",
+    "Son células sanguíneas fundamentales para la hemostasia y son las principales implicadas en alteraciones como la trombosis, trastornos hemorrágicos y en eventos trombóticos hereditarios o adquiridos",
     "Las plaquetas son células ____ con forma discoide como ____ de aproximadamente 0,5 x 3.0 um, tienen su origen de los ____ a través de un proceso endomitótico",
     "Hormona que permite el adecuado desarrollo de las plaquetas que a diferencia de la eritropoyetina se sintetiza en el músculo liso y la médula ósea y no exclusivamente en el riñón o en el hígado y se elimina a través de las mismas plaquetas que forma, por tanto a mayor destrucción plaquetaria mayor concentración de trombopoyetina circulante",
     "Los principales órganos contenidos son ____, ____, ____, ____ (cuerpos) Alfa y ________. Estos dos ultimos son especialmente importantes porque tienen una gran cantidad de factores que influyen en la coagulación los factores de Von WilleBrand, trombospondina, fibronectina, fibrinógeno, B-tromboglubina, fator plaquetario IV y factor de crecimiento derivado de plaquetas (PDGF)",
@@ -111,28 +110,25 @@ function eraseAnswer() {
 function updateQuestion() {
     var divRight = document.getElementById('divRight');
     divRight.style.display = 'flex';
-    document.getElementById('progressBar').value++;
-    const textQuestion = document.getElementById('textQuestion');
-    const numQuestion = document.getElementById('numQuestion');
-    textQuestion.textContent = questions[index];  // La primera pregunta está en el índice 1
-    numQuestion.textContent = "Pregunta No " + (index + 1); // Actualiza el número de la pregunta
+	var numQuestion = Math.floor(Math.random()*50);
+	var text = document.getElementById('textQuestionCont'); 
+	text.textContent = questions[numQuestion];
+	var num = document.getElementById('numQuestionInt');
+	num.textContent = numQuestion+1;
 }
-
-// Función que el usuario llama cuando envía una respuesta
+window.onload = function () {
+	var numQuestion = Math.floor(Math.random()*50);
+	var text = document.getElementById('textQuestionCont'); 
+	text.textContent = questions[numQuestion];
+	var num = document.getElementById('numQuestionInt');
+	num.textContent = numQuestion+1;
+}
 function sendAnswer() {
     const answerUser = (document.getElementById('inputAnswer').value).toLowerCase().trim(); // Respuesta del usuario en minúsculas y sin espacios extra
-    const textQuestion = document.getElementById('textQuestion').textContent;
-    const numQuestion = document.getElementById('numQuestion').textContent;
-    
-    if(removeAccents(answerUser) === answers[index].toLowerCase()){ // Compara la respuesta del usuario con la respuesta correcta
+    var numQuestion = parseInt(document.getElementById('numQuestionInt').textContent);
+    if(removeAccents(answerUser) === answers[numQuestion-1].toLowerCase()){ // Compara la respuesta del usuario con la respuesta correcta
         document.getElementById('inputAnswer').value = "";
-        index++; // Avanza al siguiente índice de la pregunta
-        if (index < questions.length) { // Si hay más preguntas
-            updateQuestion(); // Actualiza la pregunta y el número
-        } else {
-            alert("¡Has terminado el cuestionario!");
-            // Aquí podrías añadir una opción para reiniciar el cuestionario si lo deseas
-        }
+        updateQuestion();
     } else {
         eraseAnswer(); // Si la respuesta es incorrecta, borra el campo y muestra el mensaje
     }

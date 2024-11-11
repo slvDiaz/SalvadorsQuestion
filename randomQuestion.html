@@ -3,19 +3,20 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Orden Question</title>
+	<title>Random Question</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
-	<link rel="stylesheet" type="text/css" href="orden.css">
-	<script type="text/javascript" src="ordenQuestion.js"></script>
+	<link rel="stylesheet" type="text/css" href="random.css">
+	<script type="text/javascript" src="randomQuestion.js"></script>
 </head>
 <body>
 	<div class="whOne flex" id="divPrin">
 		<div class="flex" id="divSub">
-			<progress id="progressBar" value="1" max="50"></progress>
+			<br><img src="prin.png" id="imgOne">
+			<progress id="progressBar" value="50" max="50"></progress>
 			<br><img src="prin.png" id="imgOne">
 			<br><br><br><br><br><img src="heart.gif" id="imgTwo"><br>
-			<h1 id="numQuestion">Pregunta No 1</h1>
-			<p id="textQuestion">Son células sanguíneas fundamentales para la hemostasia y son las principales implicadas en alteraciones como la trombosis, trastornos hemorrágicos y en eventos trombóticos hereditarios o adquiridos.</p>
+			<div class="flex" style="width: 70%; justify-content: space-evenly;"><h1 id="numQuestion">Pregunta No</h1><h1 id="numQuestionInt"></h1></div>
+			<p id="textQuestionCont"></p>
 			<label class="lblQuestion flex">
 				<input type="text" name="" id="inputAnswer">
 			</label>
