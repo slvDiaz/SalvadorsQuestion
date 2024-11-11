@@ -1,0 +1,71 @@
+progress {
+	position: absolute;
+	top: 25%;
+	-webkit-appearance: none;
+	width: 55%;
+}
+#imgOne{
+	position: absolute;
+	bottom: 75%;
+	width: 29%;
+}
+#imgTwo{
+	width: 20%;
+}
+input{
+	outline: none;
+	border: none;
+	width: 80%;
+	height: 35px;
+	border-radius: 20px;
+	text-align: center;
+	padding: 15px;
+}
+h1{
+
+}
+::-webkit-progress-bar {
+	background-color: #c992d1;
+}
+::-webkit-progress-value {
+	background-color: #a27ac8;
+}
+.lblQuestion{
+	width: 100%;
+	height: 20%;
+	flex-direction: column;
+	transition: 500ms ease;
+}
+#textQuestion{
+	text-align: center;
+	height: 25%;
+	overflow: scroll;
+}
+#sendAnswer{
+	width: 50%;
+	height: 8%;
+	background-color: #029ba9;
+	border-radius: 30px;
+	color: #fff;
+}
+#divError{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 0, 0, 0.1);
+	backdrop-filter: blur(8px);
+	display: none;
+}
+#divRight{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 255, 0.1);
+	backdrop-filter: blur(8px);
+	display: none;
+}
+.imgER{
+	position: static;
+	width: 100%;
+	margin-bottom: 22%;
+}
